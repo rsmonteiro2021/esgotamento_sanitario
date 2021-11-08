@@ -11,6 +11,7 @@ while N > 0:
         break
     elif N < 0:
         print('ERROR! Você digitou um valor inválido!\n Digite um valor maior que zero ou 0 para encerrar')
+        N = 1
         continue
     else:
         temperatura = float(input('Digite a temperatura média do local em Graus Celsius:\n '))
