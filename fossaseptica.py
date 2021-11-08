@@ -2,7 +2,7 @@
     Dimensionamento de uma Fossa Séptica em conformidade com a NBR 7229/1993:
 '''
 '''
-    Entra com os dados da Fossa Séptica
+    Entre com os dados da Fossa Séptica
 '''
 N = 1
 while N > 0:
