@@ -83,4 +83,5 @@ while N > 0:
         print('Tratando apenas de empreendimentos residenciais, conforme NBR 7229/1993 Lf = 1!')
 
         V = 1000 + N*(C*T + k*Lf)
-        print('O Volume Útil da Fossa Septica calculado é de : %5.2f Litros' % V)
+        print('\nMEMÓRIA DE CÁLCULO\n')
+        print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nVolume Útil: {V} Litros\n')
