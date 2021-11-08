@@ -1,9 +1,8 @@
-'''
-    Dimensionamento de uma Fossa Séptica em conformidade com a NBR 7229/1993:
-'''
+#Calcula o volume de uma fossa sépica para estabelecimentos residenciais em conformidade com a NBR 7229/1993
 '''
     Entre com os dados da Fossa Séptica
 '''
+print(' Dimensionamento de uma Fossa Séptica pra estabelecimentos residenciais em conformidade com a NBR 7229/1993:')
 N = 1
 while N > 0:
     N = int(input('Digite o número de contribuintes ou 0 (zero) para encerrar:\n '))
