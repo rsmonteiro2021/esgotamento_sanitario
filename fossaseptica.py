@@ -4,14 +4,13 @@
 '''
 print(' Dimensionamento de uma Fossa Séptica pra estabelecimentos residenciais em conformidade com a NBR 7229/1993:')
 N = 1
-while N > 0:
+while N != 0:
     N = int(input('Digite o número de contribuintes ou 0 (zero) para encerrar:\n '))
     if N == 0:
         print('Você finalizou o programa!')
         break
     elif N < 0:
         print('ERROR! Você digitou um valor inválido!\n Digite um valor maior que zero ou 0 para encerrar')
-        N = 1
         continue
     else:
         temperatura = float(input('Digite a temperatura média do local em Graus Celsius:\n '))
