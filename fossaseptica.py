@@ -67,38 +67,6 @@ while N != 0:
                     k = 225
                 else:
                     k = 217
-        elif limpeza == 2:
-            if temperatura <= 10:
-                k = 134
-            elif temperatura > 10 and temperatura <= 20:
-                k = 105
-            else:
-                k = 97
-        elif limpeza == 3:
-            if temperatura <= 10:
-                k = 174
-            elif temperatura > 10 and temperatura <= 20:
-                k = 145
-            else:
-                k = 137
-        elif limpeza == 4:
-            if temperatura <= 10:
-                k = 214
-            elif temperatura > 10 and temperatura <= 20:
-                k = 185
-            else:
-                k = 177
-        elif limpeza == 5:
-            if temperatura <= 10:
-                k = 254
-            elif temperatura > 10 and temperatura <= 20:
-                k = 225
-            else:
-                k = 217
-        else:
-            print('ERROR! O intervalo de limpeza não pode ser superior a 5 anos!')
-            continue
->>>>>>> Stashed changes
         contribuicao_diaria = N * C
         if contribuicao_diaria <= 0:
             print('ERRROR! Não é possível dimensionar o volume da fossa - N e C devem se maior que zero!')
