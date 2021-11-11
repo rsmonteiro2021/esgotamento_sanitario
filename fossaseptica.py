@@ -15,53 +15,58 @@ while N != 0:
     else:
         temperatura = float(input('Digite a temperatura média do local em Graus Celsius:\n '))
         limpeza = float(input('Digite o intervalo de limpeza em anos:\n '))
-        padrao = input('Digite o padrão resiencial (a para alto, m para médio ou b para baixo):\n ')
-        if padrao == 'a':
-            C = 160
-        elif padrao == 'm':
-            C = 130
-        elif padrao == 'b':
-            C = 100
+        if limpeza < 0 or limpeza > 5:
+            print('ERROR!O intervalo de limpeza deve está entre 1 ano e 5 anos!\n')
+            continue
         else:
-            print('ERROR!Verifique a opção desejada!')
-        if limpeza == 1:
-            if temperatura <= 10:
-                k = 94
-            elif temperatura > 10 and temperatura <= 20:
-                k = 65
+            padrao = input('Digite o padrão resiencial (a para alto, m para médio ou b para baixo):\n ')
+            if padrao == 'a' or padrao == 'A':
+                C = 160
+                padrao = 'alto'
+            elif padrao == 'm' or padrao == 'M':
+                C = 130
+                padrao = 'médio'
+            elif padrao == 'b' or padrao == 'B':
+                C = 100
+                padrao = 'baixo'
             else:
-                k = 57
-        elif limpeza == 2:
-            if temperatura <= 10:
-                k = 134
-            elif temperatura > 10 and temperatura <= 20:
-                k = 105
-            else:
-                k = 97
-        elif limpeza == 3:
-            if temperatura <= 10:
-                k = 174
-            elif temperatura > 10 and temperatura <= 20:
-                k = 145
-            else:
-                k = 137
-        elif limpeza == 4:
-            if temperatura <= 10:
-                k = 214
-            elif temperatura > 10 and temperatura <= 20:
-                k = 185
-            else:
-                k = 177
-        elif limpeza == 5:
-            if temperatura <= 10:
-                k = 254
-            elif temperatura > 10 and temperatura <= 20:
-                k = 225
-            else:
-                k = 217
-        else:
-            print('ERROR! O tempo de detenção não pode ser superior a 5 anos!')
-
+                print('ERROR!Verifique a opção desejada digite apenas a, b ou m!\n')
+                continue
+            if limpeza == 1:
+                if temperatura <= 10:
+                    k = 94
+                elif temperatura > 10 and temperatura <= 20:
+                    k = 65
+                else:
+                    k = 57
+            elif limpeza == 2:
+                if temperatura <= 10:
+                    k = 134
+                elif temperatura > 10 and temperatura <= 20:
+                    k = 105
+                else:
+                    k = 97
+            elif limpeza == 3:
+                if temperatura <= 10:
+                    k = 174
+                elif temperatura > 10 and temperatura <= 20:
+                    k = 145
+                else:
+                    k = 137
+            elif limpeza == 4:
+                if temperatura <= 10:
+                    k = 214
+                elif temperatura > 10 and temperatura <= 20:
+                    k = 185
+                else:
+                    k = 177
+            elif limpeza == 5:
+                if temperatura <= 10:
+                    k = 254
+                elif temperatura > 10 and temperatura <= 20:
+                    k = 225
+                else:
+                    k = 217
         contribuicao_diaria = N * C
         if contribuicao_diaria <= 0:
             print('ERRROR! Não é possível dimensionar o volume da fossa - N e C devem se maior que zero!')
@@ -84,4 +89,5 @@ while N != 0:
 
         V = 1000 + N*(C*T + k*Lf)
         print('\nMEMÓRIA DE CÁLCULO\n')
-        print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nVolume Útil: {V} Litros\n')
+        print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
+        print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
