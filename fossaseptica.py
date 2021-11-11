@@ -30,6 +30,7 @@ while N != 0:
                 C = 100
                 padrao = 'baixo'
             else:
+    <<<<<<< Updated upstream
                 print('ERROR!Verifique a opção desejada digite apenas a, b ou m!\n')
                 continue
             if limpeza == 1:
@@ -67,6 +68,40 @@ while N != 0:
                     k = 225
                 else:
                     k = 217
+=======
+                k = 57
+        elif limpeza == 2:
+            if temperatura <= 10:
+                k = 134
+            elif temperatura > 10 and temperatura <= 20:
+                k = 105
+            else:
+                k = 97
+        elif limpeza == 3:
+            if temperatura <= 10:
+                k = 174
+            elif temperatura > 10 and temperatura <= 20:
+                k = 145
+            else:
+                k = 137
+        elif limpeza == 4:
+            if temperatura <= 10:
+                k = 214
+            elif temperatura > 10 and temperatura <= 20:
+                k = 185
+            else:
+                k = 177
+        elif limpeza == 5:
+            if temperatura <= 10:
+                k = 254
+            elif temperatura > 10 and temperatura <= 20:
+                k = 225
+            else:
+                k = 217
+        else:
+            print('ERROR! O intervalo de limpeza não pode ser superior a 5 anos!')
+            continue
+>>>>>>> Stashed changes
         contribuicao_diaria = N * C
         if contribuicao_diaria <= 0:
             print('ERRROR! Não é possível dimensionar o volume da fossa - N e C devem se maior que zero!')
@@ -89,5 +124,9 @@ while N != 0:
 
         V = 1000 + N*(C*T + k*Lf)
         print('\nMEMÓRIA DE CÁLCULO\n')
+<<<<<<< Updated upstream
         print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
         print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
+=======
+        print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nContribuição Diária = {C};\nContribuição de Lodo Fresco (Lf) = {Lf};\nTempo de Detenção (Td) = {T};\nVolume Útil: {V} Litros;')
+>>>>>>> Stashed changes
