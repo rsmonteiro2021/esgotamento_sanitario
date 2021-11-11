@@ -30,7 +30,6 @@ while N != 0:
                 C = 100
                 padrao = 'baixo'
             else:
-    <<<<<<< Updated upstream
                 print('ERROR!Verifique a opção desejada digite apenas a, b ou m!\n')
                 continue
             if limpeza == 1:
@@ -68,8 +67,6 @@ while N != 0:
                     k = 225
                 else:
                     k = 217
-=======
-                k = 57
         elif limpeza == 2:
             if temperatura <= 10:
                 k = 134
@@ -124,9 +121,5 @@ while N != 0:
 
         V = 1000 + N*(C*T + k*Lf)
         print('\nMEMÓRIA DE CÁLCULO\n')
-<<<<<<< Updated upstream
         print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
         print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
-=======
-        print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nContribuição Diária = {C};\nContribuição de Lodo Fresco (Lf) = {Lf};\nTempo de Detenção (Td) = {T};\nVolume Útil: {V} Litros;')
->>>>>>> Stashed changes
