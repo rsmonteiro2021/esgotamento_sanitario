@@ -61,19 +61,45 @@ while N != 0:
             print('ERROR!O intervalo de limpeza deve está entre 1 ano e 5 anos!\n')
             continue
         else:
-            padrao = input('Digite o padrão resiencial (a para alto, m para médio ou b para baixo):\n ')
-            if padrao == 'a' or padrao == 'A':
-                C = 160
-                padrao = 'alto'
-            elif padrao == 'm' or padrao == 'M':
-                C = 130
-                padrao = 'médio'
-            elif padrao == 'b' or padrao == 'B':
+            if tipo == 1:
+                Lf = 1
+                padrao = input('Digite o padrão resiencial (a para alto, m para médio ou b para baixo):\n ')
+                if padrao == 'a' or padrao == 'A':
+                    C = 160
+                    padrao = 'alto'
+                elif padrao == 'm' or padrao == 'M':
+                    C = 130
+                    padrao = 'médio'
+                elif padrao == 'b' or padrao == 'B':
+                    C = 100
+                    padrao = 'baixo'
+                else:
+                    print('ERROR!Verifique a opção desejada digite apenas a, b ou m!\n')
+                    continue
+            elif tipo == 2:
+                Lf = 1
                 C = 100
-                padrao = 'baixo'
+            elif tipo == 3:
+                Lf = 1
+                C = 80
+            elif tipo == 4:
+                Lf = 0.20
+                C = 50
+            elif tipo == 5:
+                Lf = 0.10
+                C = 25
+            elif tipo == 6:
+                Lf = 0.30
+                C = 70
+            elif tipo == 7:
+                Lf = 0.20
+                C = 50
+            elif tipo == 8:
+                Lf = 0.20
+                C = 50
             else:
-                print('ERROR!Verifique a opção desejada digite apenas a, b ou m!\n')
-                continue
+                Lf = 0.10
+                C = 6
             if limpeza == 1:
                 if temperatura <= 10:
                     k = 94
@@ -109,11 +135,12 @@ while N != 0:
                     k = 225
                 else:
                     k = 217
+        
         contribuicao_diaria = N * C
         if contribuicao_diaria <= 0:
             print('ERRROR! Não é possível dimensionar o volume da fossa - N e C devem se maior que zero!')
         elif contribuicao_diaria > 0 and contribuicao_diaria<= 1500:
-            T = T
+            T = 1
         elif contribuicao_diaria > 1500 and contribuicao_diaria <= 3000:
             T = 0.92
         elif contribuicao_diaria > 3000 and contribuicao_diaria <= 4500:
@@ -126,10 +153,12 @@ while N != 0:
             T = 0.58
         else:
             T = 0.50
-        Lf = 1
-        print('Tratando apenas de empreendimentos residenciais, conforme NBR 7229/1993 Lf = 1!')
 
         V = 1000 + N*(C*T + k*Lf)
         print('\nMEMÓRIA DE CÁLCULO\n')
-        print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
-        print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
+        if tipo == 1:
+            print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
+            print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
+        else:
+            print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
+            print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
