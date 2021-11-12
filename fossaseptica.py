@@ -2,7 +2,49 @@
 '''
     Entre com os dados da Fossa Séptica
 '''
-print(' Dimensionamento de uma Fossa Séptica pra estabelecimentos residenciais em conformidade com a NBR 7229/1993:')
+print('\nVerifique as opões abaixo:\n') # Exibe uma mensagem na tela com o menu de empreendimentos!
+empreendimentos = {1: 'Residencia', 2: 'Hotel', 3: 'Alojamento', 4: 'Escritório', 5: 'Restaurantes e Similares',
+          6: 'Fábrica e Geral', 7: 'Edifícios Públicos ou Comerciais', 8: 'Escolas(Externatos) e Locais de Longa Permanência',
+          9: 'Bares'}
+    
+    #    Apresenta um menu com os tipos de empreendimentos!
+
+tipo = 1
+while tipo >= 1 or tipo <= 9:
+    for key, value in empreendimentos.items():
+        print(f'\t{key}: {value}')
+    tipo = int(input('\nEscolha o tipo de empreendimento para o qual deseja dimensionar a fossa séptica: \n'))
+    if tipo == 1:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Residencial em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 2:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Hotel em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 3:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Alojamento em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 4:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Escritório em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 5:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Restaurantes e Similares em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 6:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Fábrica em Geral em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 7:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Edifícios Públicos ou Comerciais em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 8:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Escolas(Externatos) e Locais de Longa Permanência em conformidade com a NBR 7229/1993:')
+        break
+    elif tipo == 9:
+        print('\nVocê selecionou Dimensionamento de uma Fossa Séptica para estabelecimentos do tipo Bares em conformidade com a NBR 7229/1993:')
+        break
+    else:
+        print('ERROR! Verifique a opção desejada!')
+        tipo = 1
+        continue
 N = 1
 while N != 0:
     N = int(input('Digite o número de contribuintes ou 0 (zero) para encerrar:\n '))
