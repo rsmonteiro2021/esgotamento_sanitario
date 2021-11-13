@@ -6,9 +6,8 @@
 '''
 #    Apresenta um menu com os tipos de empreendimentos!
 
-print('''\nDIMENSIONAMENTO DE UM TANQUE SÉPTICO
-    Versão Beta 11.2021- desenvolvido por Roberto dos Santos Monteiro.''')
-print('\nVerifique as opões abaixo:\n') # Exibe uma mensagem na tela com o menu de empreendimentos!
+print('\nDIMENSIONAMENTO DE UM TANQUE SÉPTICO Versão Beta 11.2021- desenvolvido por Roberto dos Santos Monteiro.')
+print('\nVerifique as opões abaixo:\n')
 empreendimentos = {1: 'Residencia', 2: 'Hotel', 3: 'Alojamento', 4: 'Escritório', 5: 'Restaurantes e Similares',
           6: 'Fábrica e Geral', 7: 'Edifícios Públicos ou Comerciais', 8: 'Escolas(Externatos) e Locais de Longa Permanência',
           9: 'Bares'}
