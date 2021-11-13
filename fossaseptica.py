@@ -52,7 +52,7 @@ N = 1
 while N != 0:
     N = int(input('Digite o número de contribuintes ou 0 (zero) para encerrar:\n '))
     if N == 0:
-        print('Você finalizou o programa!')
+        print('Você finalizou o programa!\n')
         break
     elif N < 0:
         print('ERROR! Você digitou um valor inválido!\n Digite um valor maior que zero ou 0 para encerrar')
