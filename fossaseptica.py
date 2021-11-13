@@ -179,7 +179,7 @@ while N != 0:
             B = A/L
             print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
                 
-            print('\nMEMÓRIA DE CÁLCULO\n')
+        print('\nMEMÓRIA DE CÁLCULO\n')
             if tipo == 1:
                 print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
                 print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
