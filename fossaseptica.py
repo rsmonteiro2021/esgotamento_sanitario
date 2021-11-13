@@ -163,21 +163,21 @@ while N != 0:
             print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %[L, B, h])
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
         elif V > 6.0 or V <= 10:
             h = float(input('Digite a profundidade entre 1.50m e 2.50m:\n'))
             A = V/h
             print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %[L, B, h])
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
         else:
             h = float(input('Digite a profundidade entre 1.80m e 2.80m\n'))
             A = V/h
             print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %[L, B, h])
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
                 
             print('\nMEMÓRIA DE CÁLCULO\n')
             if tipo == 1:
