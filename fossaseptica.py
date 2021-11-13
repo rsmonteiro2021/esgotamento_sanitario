@@ -160,31 +160,33 @@ while N != 0:
         if V <= 6:
             h = float(input('\nDigite a profunidade entre 1.20m e 2.20m:\n'))
             A = V/h
-            print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
+            print('a área útil a ser ocupada pela base da fossa séptica será de %5.2fm².' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm (largura, comprimento, profundidade).' %(L, B, h))
         elif V > 6.0 or V <= 10:
             h = float(input('Digite a profundidade entre 1.50m e 2.50m:\n'))
             A = V/h
-            print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
+            print('a área útil a ser ocupada pela base da fossa séptica será de %5.2fm².' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm (largura, comprimento, profundidade).'%(L, B, h))
         else:
             h = float(input('Digite a profundidade entre 1.80m e 2.80m\n'))
             A = V/h
             print('a área útil a ser ocupada pela base da fossa séptica será de %5.2f.' % A)
             L = float(input('Defina um valor para um lado da área:\n'))
             B = A/L
-            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm' %(L, B, h))
+            print('As dimensões da fossa séptica serão: %5.2fm x %5.2fm x %5.2fm (largura, comprimento, profundidade).' %(L, B, h))
                 
         print('\nMEMÓRIA DE CÁLCULO\n')
-            if tipo == 1:
-                print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
-                print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
-                break
-            else:
-                print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
-                print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
-                break
+        if tipo == 1:
+            print(f'Polulação: {N} contribuintes;\nPadrão Residencial: {padrao};\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
+            print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros\n')
+            print('Dimensões: %5.2fm x %5.2fm x %5.2fm (largura, comprimento, profundidade).' %(L, B, h))
+            break
+        else:
+            print(f'Polulação: {N} contribuintes;\nTemperatura Média: {temperatura}C;\nContribuição Diária (C): {C} Litros;\nTemmpo de Detenção (Td): {T};')
+            print(f'Contribuição de Lodo Fresco (Lf): {Lf};\nIntervalo de Limmpeza {limpeza} anos;\nVolume Útil: {V} Litros')
+            print('Dimensões: %5.2fm x %5.2fm x %5.2fm (largura, comprimento, profundidade).\n' %(L, B, h))
+            break
